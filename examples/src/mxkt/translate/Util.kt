@@ -8,7 +8,8 @@ class Util {
     companion object {
         val client = OkHttpClient()
         const val bingBaseUrl = "https://www.bing.com/translator/api/translate"
-        const val googleBaseUrl = "https://translate.googleapis.com/translate_a/single";
+        const val googleBaseUrl = "https://translate.googleapis.com/translate_a/single"
+        const val googleBaseUrl1 = "https://translate.googleapis.com/translate_a/t?"
         val JSON = "application/json; charset=utf-8".toMediaType()
 
 
