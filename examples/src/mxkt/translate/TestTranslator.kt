@@ -1,6 +1,7 @@
 package mxkt.translate
 
 import com.google.gson.Gson
+import java.util.logging.Logger
 
 fun main() {
 
@@ -32,19 +33,23 @@ fun main() {
 //            "  \"玩命再劫\",\n" +
 //            "  \"（希利大樓）\"\n" +
 //            "]"
-//    val text = "[\"\",\"I won\\u0027t finish it for you this time.\",\"\",\"The decision has to be yours.\",\"\"]"
+    val text = "[\"\",\"I won\\u0027t finish it for you this time.\",\"\",\"The decision has to be yours.\",\"\"]"
 //    val array = ArrayList<String>()
-    val builder = StringBuilder()
-    for (index in 1..30) {
-        builder.append("我很好 \n 我不好 \n 我很棒 $index \n")
-        builder.append("\n")
-        builder.append(" ")
-        builder.append("\n")
-    }
-    val gson = Gson()
-    val text = builder.toString()
+
+
+//    val builder = StringBuilder()
+//    for (index in 1..30) {
+//        builder.append("我很好 \n 我不好 \n 我很棒 $index \n")
+//        builder.append("\n")
+//        builder.append(" ")
+//        builder.append("\n")
+//    }
+//    val text = builder.toString()
+
+
 //    val text = array.toString()
 //    val text = gson.toJson(array)
+//    val gson = Gson()
 
     println(text)
 
@@ -67,6 +72,8 @@ fun main() {
     translator.setFormData(LanguageEnum.EN, LanguageEnum.JA, text)
     val response = translator.query()
     println(response)
+    val logger = Logger.getGlobal()
+    logger.info(response)
 
 }
 

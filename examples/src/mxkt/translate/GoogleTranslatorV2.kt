@@ -2,6 +2,7 @@ package mxkt.translate
 
 import okhttp3.*
 import okhttp3.RequestBody.Companion.toRequestBody
+import java.net.URLEncoder
 
 class GoogleTranslatorV2 : AITranslator() {
     private lateinit var text : String
@@ -26,13 +27,19 @@ class GoogleTranslatorV2 : AITranslator() {
         formData["format"] = "html"
         formData["v"] = "1"
         formData["sl"] = "auto"
-        formData["hl"] = "ja"
+//        formData["hl"] = "ja"
         formData["tl"] = "ja"
         formData["sp"] = "nmt"
         formData["tc"] = "2"
         formData["sr"] = "1"
         formData["mode"] = "1"
         formData["text"] = text
+
+//        formData["client"] = "gtx"
+//        formData["sl"] = "auto"
+//        formData["tl"] = "ja"
+//        formData["dt"] = "t"
+//        formData["q"] = text
 
 
         /*
@@ -50,11 +57,12 @@ class GoogleTranslatorV2 : AITranslator() {
 //        val body: RequestBody = text.toRequestBody(Util.JSON)
         val request: Request = Request.Builder()
                 .url(url)
+                .addHeader("User-Agent", Util.USER_AGENT)
 //                .post(body)
                 .get()
                 .build()
-
-        val call: Call = Util.client.newCall(request)
+       ;
+        val call: Call =  Util.client.newBuilder().addInterceptor(HttpLogInterceptor()).build().newCall(request)
         val response : Response = call.execute()
         val responseBody : ResponseBody? = response.body
 

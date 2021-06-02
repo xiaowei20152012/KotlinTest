@@ -7,6 +7,8 @@ import java.net.URLEncoder
 class Util {
     companion object {
         val client = OkHttpClient()
+        const val USER_AGENT="Mozilla/5.0";//"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36";
+
         const val bingBaseUrl = "https://www.bing.com/translator/api/translate"
         const val googleBaseUrl = "https://translate.googleapis.com/translate_a/single"
         const val googleBaseUrl1 = "https://translate.googleapis.com/translate_a/t?"
