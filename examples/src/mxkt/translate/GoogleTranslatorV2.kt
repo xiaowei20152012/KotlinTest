@@ -22,24 +22,24 @@ class GoogleTranslatorV2 : AITranslator() {
 //        formData.put("dt", "t");
 //        formData.put("q", text);
 
-        formData["anno"] = "3"
-        formData["client"] = "wt_lib"
-        formData["format"] = "html"
-        formData["v"] = "1"
-        formData["sl"] = "auto"
-//        formData["hl"] = "ja"
-        formData["tl"] = "ja"
-        formData["sp"] = "nmt"
-        formData["tc"] = "2"
-        formData["sr"] = "1"
-        formData["mode"] = "1"
-        formData["text"] = text
-
-//        formData["client"] = "gtx"
+//        formData["anno"] = "3"
+//        formData["client"] = "wt_lib"
+//        formData["format"] = "html"
+//        formData["v"] = "1"
 //        formData["sl"] = "auto"
+////        formData["hl"] = "ja"
 //        formData["tl"] = "ja"
-//        formData["dt"] = "t"
-//        formData["q"] = text
+//        formData["sp"] = "nmt"
+//        formData["tc"] = "2"
+//        formData["sr"] = "1"
+//        formData["mode"] = "1"
+//        formData["text"] = text
+
+        formData["client"] = "gtx"
+        formData["sl"] = "auto"
+        formData["tl"] = "ja"
+        formData["dt"] = "t"
+        formData["q"] = text
 
 
         /*
