@@ -14,5 +14,9 @@
     <orderEntry type="library" name="io.reactivex.rxjava3:rxjava:3.0.11" level="project" />
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.5" level="project" />
     <orderEntry type="library" name="com.google.guava:guava:30.1.1-jre" level="project" />
+    <orderEntry type="library" name="org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2" level="project" />
+    <orderEntry type="library" name="java-sizeof-0.0.5" level="project" />
+    <orderEntry type="library" name="jol-core-0.9" level="project" />
+    <orderEntry type="library" name="com.github.lafa.tikaNoExternal:tika-langdetect:1.0.9" level="project" />
   </component>
 </module>
